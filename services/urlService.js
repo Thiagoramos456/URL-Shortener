@@ -1,8 +1,8 @@
 const generateRandomURL = require('../helpers/generateRandomURL');
 
-const shortenUrl = (oldUrl) => {
+const shortenUrl = async (oldUrl) => {
   const newUrl = generateRandomURL();
-  // await saveUrl(oldUrl, newUrl);
+  await saveUrl(oldUrl, newUrl);
   return newUrl;
 }
 

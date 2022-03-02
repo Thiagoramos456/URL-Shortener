@@ -1,4 +1,4 @@
-const shortenUrl = (_req, res) => {
+const shortenUrl = async (_req, res) => {
   return res.status(201).send('Rota Concluída')
 }
 
