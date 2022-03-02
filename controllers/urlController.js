@@ -9,9 +9,8 @@ const shortenUrl = async (req, res) => {
 
 const redirectToUrl = async (req, res) => {
   const { encodedUrl } = req.params;
-  console.log(encodedUrl);
   const url = await urlService.getUrl(encodedUrl);
-  return res.status(301).redirect(`${url}`);
+  return res.status(301).redirect(url);
 }
 
 module.exports = { shortenUrl, redirectToUrl }
