@@ -1,5 +1,9 @@
-const shortenUrl = async (_req, res) => {
-  return res.status(201).send('Rota Concluída')
+const urlService = require('../services/urlService');
+
+const shortenUrl = async (req, res) => {
+  const { url } = req.body;
+  const newUrl = await urlService.shortenUrl(url);
+  return res.status(201).json({ newUrl });
 }
 
 module.exports = { shortenUrl }

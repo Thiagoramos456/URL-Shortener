@@ -1,4 +1,5 @@
 const generateRandomURL = require('../helpers/generateRandomURL');
+const { saveUrl } = require('../models/urlModel');
 
 const shortenUrl = async (oldUrl) => {
   const newUrl = generateRandomURL();

@@ -1,7 +1,7 @@
 const connection = require('./connection');
 
 const saveUrl = async (oldUrl, newUrl) => {
-  await connection.execute('INSERT INTO url (old, new) VALUES (?, ?)', 
+  await connection.execute('INSERT INTO url (oldUrl, newUrl) VALUES (?, ?)', 
   [oldUrl, newUrl]);
 };
 
