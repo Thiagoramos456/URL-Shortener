@@ -1,6 +1,6 @@
 import React from 'react';
 
-function shortenerForm() {
+function ShortenerForm() {
   return (
     <form className="flex flex-col items-center">
       <input
@@ -12,4 +12,4 @@ function shortenerForm() {
   );
 }
 
-export default shortenerForm;
+export default ShortenerForm;
