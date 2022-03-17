@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 
@@ -7,6 +8,8 @@ function ShortenerForm({ url, setUrl, setShortenedUrl }) {
   const handleInputUrl = ({ target }) => {
     setUrl(target.value);
   };
+
+  useEffect(() => setUrl(''), [setUrl]);
 
   const submitUrl = async (e) => {
     e.preventDefault();
