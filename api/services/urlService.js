@@ -3,7 +3,10 @@ const urlModel = require('../models/urlModel');
 
 const shortenUrl = async (oldUrl) => {
   const newUrl = generateRandomURL();
-  await urlModel.saveUrl(oldUrl, newUrl);
+  let fixedOldUrl = oldUrl;
+  if (!oldUrl.startsWith('http')) fixedOldUrl = 'http://' + oldUrl;
+  console.log(fixedOldUrl);
+  await urlModel.saveUrl(fixedOldUrl, newUrl);
   return newUrl;
 }
 
